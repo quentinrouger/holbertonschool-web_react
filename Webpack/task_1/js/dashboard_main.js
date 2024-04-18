@@ -13,11 +13,10 @@ $(document).ready(() => {
     // Update counter function
     const updateCounter = _.debounce(() => {
       count++;
-      $('#count').text(`${count} clicks on the button`);
-    }, 500);
+      const clicksText = count === 1 ? 'click' : 'clicks';
+  $('#count').text(`${count} ${clicksText} on the button`);
+}, 500);
 
-    $('button').on('click', () => {
-      count++;
-      $('#count').text(`${count} clicks on the button`);
-    });
+    // Bind updateCounter to button click event
+    $('button').on('click', updateCounter);
 });
