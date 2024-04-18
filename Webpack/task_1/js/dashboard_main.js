@@ -13,8 +13,8 @@ let count = 0;
   const updateCounter = _.debounce(() => {
     count++;
     const clicksText = count === 1 ? 'click' : 'clicks';
-$('#count').text(`${count} ${clicksText} on the button`);
-}, 500);
+    $('#count').text(`${count} ${clicksText} on the button`);
+  }, 500);
 
   // Bind updateCounter to button click event
   $('button').on('click', updateCounter);
