@@ -2,8 +2,9 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: {
-    main: './js/dashboard_main.js',
+  entry: './js/dashboard_main.js',
+  performance: {
+    maxAssetSize: 1000000,
   },
   output: {
     filename: 'bundle.js',
@@ -22,7 +23,7 @@ module.exports = {
                         loader: 'image-webpack-loader',
                         options: {
                             bypassOnDebug: true,
-                            // type: 'asset/resource',
+                            disable: true,
                         },
                     }
                 ]
