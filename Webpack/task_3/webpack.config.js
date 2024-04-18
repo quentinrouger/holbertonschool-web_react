@@ -15,22 +15,17 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+          test: /\.css$/i,
+          use: [
+              'style-loader',
+              'css-loader'
+          ]
       },
       {
-        test: /\.(gif|png|jpg|jpeg|svg)$/i,
-                use: [
-                  "file-loader",
-                    {
-                        loader: 'image-webpack-loader',
-                        options: {
-                            bypassOnDebug: true,
-                        },
-                    }
-                ]
-      },
-    ],
+          test: /\.(gif|png|jpe?g|svg)$/i,
+          type: 'asset/resource',
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -45,8 +40,9 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    static: path.join(__dirname, 'public'), // Serve files from the public directory
-    port: 8564, // Set the port to 8564
-    open: true, // Open the browser automatically
+    static: {
+      directory: './public'
+   },
+    port: 8564,
   },
 };
