@@ -1,0 +1,32 @@
+.App {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 98vh;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.2rem;
+  color: #e11d3f;
+  border-bottom: solid #e11d3f;
+}
+
+.App-header img {
+  width: 250px;
+}
+
+.App-body {
+  margin-top: 1rem;
+  height: max-content;
+  padding-left: 3rem;
+}
+
+.App-footer {
+  text-align: center;
+  font-style: italic;
+  margin-top: auto;
+  border-top: solid #e11d3f;
+}
