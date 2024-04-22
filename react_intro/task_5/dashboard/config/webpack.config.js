@@ -11,6 +11,7 @@ module.exports = {
       directory: path.resolve(__dirname, '../dist'),
     },
     hot: true,
+    port: 8564,
   },
   devtool: 'inline-source-map',
   module: {
