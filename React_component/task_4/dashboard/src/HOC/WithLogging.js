@@ -1,39 +1,3 @@
-// import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
-
-// class WithLogging extends Component {
-//   componentDidMount() {
-//     const { displayName } = this.getComponentName();
-//     console.log(`Component ${displayName} is mounted`);
-//   }
-
-//   componentWillUnmount() {
-//     const { displayName } = this.getComponentName();
-//     console.log(`Component ${displayName} is going to unmount`);
-//   }
-
-//   getComponentName() {
-//     const { type } = this.props.children;
-//     const displayName = type.displayName || type.name || 'Component';
-//     return { displayName };
-//   }
-
-//   render() {
-//     const { children } = this.props;
-//     return children;
-//   }
-// }
-
-// WithLogging.propTypes = {
-//   children: PropTypes.node.isRequired,
-// };
-
-// WithLogging.displayName = function(WrappedComponent) {
-//   return `WithLogging(${WrappedComponent.displayName || WrappedComponent.name || 'Component'})`;
-// };
-
-// export default WithLogging;
-
 import React from "react";
 
 function WithLogging(WrappedComponent) {
