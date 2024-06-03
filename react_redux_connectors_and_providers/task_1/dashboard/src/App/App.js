@@ -40,7 +40,6 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayDrawer: false,
       user: {
         email: '',
         password: '',
@@ -48,8 +47,6 @@ class App extends Component {
       },
       listNotifications: listNotifications
     };
-    this.handleDisplayDrawer = this.handleDisplayDrawer.bind(this);
-    this.handleHideDrawer = this.handleHideDrawer.bind(this);
     this.logIn = this.logIn.bind(this);
     this.logOut = this.logOut.bind(this);
     this.markNotificationAsRead = this.markNotificationAsRead.bind(this);
@@ -69,14 +66,6 @@ class App extends Component {
       alert('Logging you out');
       this.props.logOut();
     }
-  }
-
-  handleDisplayDrawer = () => {
-    this.setState({ displayDrawer: true });
-  }
-
-  handleHideDrawer = () => {
-    this.setState({ displayDrawer: false });
   }
 
   logIn(email, password) {

@@ -70,26 +70,6 @@ describe('App Component with isLoggedIn', () => {
     jest.restoreAllMocks();
   });
 
-  it('verifies that the default state for displayDrawer is false', () => {
-    const wrapper = shallow(<App />);
-    const instance = wrapper.instance();
-    expect(instance.state.displayDrawer).toBe(false);
-  });
-
-  it('verifies that after calling handleDisplayDrawer, the state should now be true', () => {
-    const wrapper = shallow(<App />);
-    const instance = wrapper.instance();
-    instance.handleDisplayDrawer();
-    expect(instance.state.displayDrawer).toBe(true);
-  });
-
-  it('verifies that after calling handleHideDrawer, the state is updated to be false', () => {
-    const wrapper = shallow(<App />);
-    const instance = wrapper.instance();
-    instance.handleDisplayDrawer();
-    instance.handleHideDrawer();
-    expect(instance.state.displayDrawer).toBe(false);
-  });
   it('should update the state when logIn is been called', () => {
     const wrapper = shallow(<App />);
     wrapper.instance().logIn();
